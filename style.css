@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.dark-mode table {
+    border-color: white;
+}
+
+.dark-mode th {
+    background-color: #7d7b7b;
+}
+
+.btn {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    opacity: 0.8s;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: white;
+}
+
+.delete-btn {
+    background: rgb(235, 63, 63);
+    color: white;
+    border: none;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+
+.dark-mode .delete-btn{
+    background: rgb(235, 63, 63);
+}
+
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none; /* Скрываем заголовки таблицы */
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    td::before {
+        content: attr(data-label); /* Подставляем название колонки */
+        font-weight: bold;
+    }
+}

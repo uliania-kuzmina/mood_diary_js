@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник настроения</title>
+    <link rel="stylesheet" href="../mood diary/style.css">
+</head>
+<body>
+    <button id="toggleTheme" class="btn">Переключить тему</button>
+
+    <h1>Добро пожаловать в ваш дневник настроения!</h1>
+
+    <label>Ваше настроение сегодня:
+        <select id="moodCategory" class="category">
+            <option>Веселое</option>
+            <option>Радостное</option>
+            <option>Грустное</option>
+            <option>Злое</option>
+            <option>Нормальное</option>
+            <option>Другое</option>
+        </select>
+    </label>
+    <label>Комментарий: <input type="text" id="moodCommit"></label>
+    <label>Можете выбрать цвет под настроение:
+        <input type="color" id="moodColor">
+    </label>
+
+    <button onclick="addMood()" class="btn">Добавить</button>
+    <button onclick="deleteMood()" class="btn">Очистить</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Настроение</th>
+                <th>Комментарий</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="moodTable"></tbody>
+    </table>
+    
+    <script src="../mood diary/script.js"></script>
+</body>
+</html>
